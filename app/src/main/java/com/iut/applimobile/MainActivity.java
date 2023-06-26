@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = email_edit.getText().toString();
                 String password = password_edit.getText().toString();
-                if(email != "" && password != ""){
+                if(!email.equals("") && !password.equals("")){
                     setContentView(R.layout.activity_menu);
                 }
             }
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intSignAct = new Intent(MainActivity.this, SignInActivity.class);
                 startActivity(intSignAct);
-                finish();
             }
         });
     }
