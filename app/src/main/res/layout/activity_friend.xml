@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_adding_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="33dp"
+        android:text="@string/adding_friends"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUsername_friend"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsername_friend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:labelFor="@id/editTextUsername_friend"
+        android:id="@+id/editTextUsername_friend"
+        android:layout_width="211dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/nom_de_l_utilisateur"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button_add_fr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_adding_friends"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/submit_button_add_fr"
+        android:layout_width="141dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toTopOf="@+id/return_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername_friend" />
+
+    <Button
+        android:id="@+id/return_main"
+        android:layout_width="142dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="410dp"
+        android:text="@string/return_to_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit_button_add_fr" />
+</androidx.constraintlayout.widget.ConstraintLayout>

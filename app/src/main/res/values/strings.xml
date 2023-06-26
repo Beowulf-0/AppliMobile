@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AppliMobile</string>
+    <string name="sign_in_page">Sign-in page</string>
+    <string name="entrez_votre_position_y">Entrez votre position Y</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="entrez_votre_adresse_mail">Entrez votre adresse mail</string>
+    <string name="entrez_votre_mot_de_passe">Entrez votre mot de passe</string>
+    <string name="coord_x">Coord X</string>
+    <string name="coord_y">Coord Y</string>
+    <string name="entrez_votre_position_x">Entrez votre position X</string>
+    <string name="entrez_vos_coordonn_es">Entrez vos coordonnées</string>
+    <string name="submit">Submit</string>
+    <string name="login_page">Login page</string>
+    <string name="username">Username</string>
+    <string name="adding_friends">Adding friends</string>
+    <string name="nom_de_l_utilisateur">Nom de l\'utilisateur</string>
+    <string name="mot_de_passe">Entrez votre mot de passe</string>
+    <string name="return_to_main">Return to main</string>
+    <string name="sign_in">Sign-in</string>
+</resources>

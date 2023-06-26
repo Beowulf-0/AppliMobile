@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/sign_in_page"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/username_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:ems="15"
+        android:hint="@string/nom_de_l_utilisateur"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/email_signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_text" />
+
+    <EditText
+        android:id="@+id/editTextEmailSignin2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:ems="15"
+        android:inputType="textEmailAddress"
+        android:hint="@string/entrez_votre_adresse_mail"
+        app:layout_constraintBottom_toTopOf="@+id/password_signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_signin"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/email_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/email"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailSignin2"
+        app:layout_constraintStart_toStartOf="@+id/username_text"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+
+    <EditText
+        android:id="@+id/editTextPasswordSignin"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        android:ems="15"
+        android:inputType="textPassword"
+        android:hint="@string/entrez_votre_mot_de_passe"
+        app:layout_constraintBottom_toTopOf="@+id/coords_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_signin"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/password_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/password"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordSignin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordSignin"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordSignin"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignin2" />
+
+    <EditText
+        android:id="@+id/editTextCoordY"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:ems="15"
+        android:inputType="number"
+        android:hint="@string/entrez_votre_position_y"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coord_y_text"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/coord_x_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="@string/coord_x"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCoordX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coords_text" />
+
+    <TextView
+        android:id="@+id/coord_y_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/coord_y"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCoordY"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCoordY"
+        app:layout_constraintStart_toStartOf="@+id/editTextCoordY"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCoordX" />
+
+    <EditText
+        android:id="@+id/editTextCoordX"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:ems="15"
+        android:inputType="number"
+        android:hint="@string/entrez_votre_position_x"
+        app:layout_constraintBottom_toTopOf="@+id/coord_y_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coord_x_text"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/coords_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/entrez_vos_coordonn_es"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/coord_x_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignin" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toTopOf="@+id/login_page"
+        app:layout_constraintStart_toStartOf="@+id/login_page"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCoordY" />
+
+    <Button
+        android:id="@+id/login_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="@string/login_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <TextView
+        android:id="@+id/username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/username"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

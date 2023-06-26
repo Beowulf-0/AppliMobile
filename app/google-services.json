@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743185785835",
+    "project_id": "applimob-6a6c4",
+    "storage_bucket": "applimob-6a6c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743185785835:android:fc7388e3333686c54a6fae",
+        "android_client_info": {
+          "package_name": "com.iut.applimobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743185785835-4bqdm6qmka5uoqntu3ovom3m6b5o3uhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaLR8lvbpWXkF3Bn0kmHAzfMoCcTOHOhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743185785835-4bqdm6qmka5uoqntu3ovom3m6b5o3uhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
