@@ -16,6 +16,10 @@ public class User {
         this.coord_Y = coord_Y;
     }
 
+    public User(){
+        
+    }
+
     public double getCoord_Y() {
         return coord_Y;
     }

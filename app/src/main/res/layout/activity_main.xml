@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:onClick="print"
         android:id="@+id/signin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +85,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:onClick="print"
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

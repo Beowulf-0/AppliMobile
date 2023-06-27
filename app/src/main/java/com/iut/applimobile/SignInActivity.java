@@ -24,8 +24,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class SignInActivity extends AppCompatActivity {
 
-    private FirebaseDatabase db;
+
     private DatabaseReference myRef;
+    private FirebaseAuth mFireAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class SignInActivity extends AppCompatActivity {
         Button submit_button = (Button) findViewById(R.id.submit);
         Button login_page_button = (Button) findViewById(R.id.login_page);
 
-        this.db = FirebaseDatabase.getInstance("https://applimob-6a6c4-default-rtdb.europe-west1.firebasedatabase.app");
+        FirebaseDatabase db = FirebaseDatabase.getInstance("https://applimob-6a6c4-default-rtdb.europe-west1.firebasedatabase.app");
         this.myRef = db.getReference();
 
         submit_button.setOnClickListener(new View.OnClickListener(){
@@ -79,12 +80,24 @@ public class SignInActivity extends AppCompatActivity {
                 }
 
                 DatabaseReference dataChild = myRef.child("users");
-                Query emailQuery = dataChild.orderByChild("mail").equalTo(mail_text);
 
-                emailQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                dataChild.addListenerForSingleValueEvent(new ValueEventListener() {
+                    boolean email_existant = false;
+
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.exists()){
+
+                        for(DataSnapshot user_snap : snapshot.getChildren()){
+
+                            User user = user_snap.getValue(User.class);
+
+                            if(user != null && user.getEmail().equals(mail_text)){
+                                email_existant = true;
+                                break;
+                            }
+
+                        }
+                        if(email_existant){
                             Toast.makeText(v.getContext(), "Un utilisateur avec ce mail existe déjà", Toast.LENGTH_SHORT).show();
                         }
                         else{
