@@ -8,12 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DatabaseReference bdd;
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,18 +26,23 @@ public class MainActivity extends AppCompatActivity {
         EditText email_edit = (EditText) findViewById(R.id.editTextEmail);
         EditText password_edit = (EditText) findViewById(R.id.editTextPassword);
 
-        //this.bdd = FirebaseDatabase.getInstance().getReference("https://applimob-6a6c4-default-rtdb.europe-west1.firebasedatabase.app/");
-        /*if(bdd == null){
-            throw new NullPointerException("Référence à la base de données inexistante");
-        }*/
+
 
         submit_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 String email = email_edit.getText().toString();
                 String password = password_edit.getText().toString();
-                if(!email.equals("") && !password.equals("")){
-                    setContentView(R.layout.activity_menu);
+                if(!email.equals("") || !password.equals("")){
+                    //setContentView(R.layout.activity_menu);
+                    Intent intMenuAct = new Intent(MainActivity.this, MenuActivity.class);
+                    Toast t = Toast.makeText(v.getContext(), "Connexion réussie", Toast.LENGTH_SHORT);
+                    t.show();
+                    startActivity(intMenuAct);
+                }
+                else{
+                    Toast t = Toast.makeText(v.getContext(), "Champ(s) vide(s)", Toast.LENGTH_SHORT);
+                    t.show();
                 }
             }
         });
@@ -46,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intSignAct = new Intent(MainActivity.this, SignInActivity.class);
                 startActivity(intSignAct);
+                finish();
             }
         });
     }

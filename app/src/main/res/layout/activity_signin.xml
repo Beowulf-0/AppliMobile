@@ -92,13 +92,13 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:ems="15"
-        android:inputType="number"
         android:hint="@string/entrez_votre_position_y"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coord_y_text"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/coord_y_text" />
 
     <TextView
         android:id="@+id/coord_x_text"
@@ -130,13 +130,13 @@
         android:layout_height="0dp"
         android:layout_marginBottom="35dp"
         android:ems="15"
-        android:inputType="number"
         android:hint="@string/entrez_votre_position_x"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/coord_y_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coord_x_text"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/coord_x_text" />
 
     <TextView
         android:id="@+id/coords_text"
